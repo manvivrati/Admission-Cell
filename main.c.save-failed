@@ -1,0 +1,109 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+printf("\nWelcome to \nMody University!!\n");
+
+int j, i, g=1;
+/*Creating structure*/
+struct student{
+               char name[20];
+               char crs[20];
+               float inc[20];
+               char dob[20];
+               int mno[10];
+              } st[g];
+
+/*This is Eligibility check*/
+for (i=0; i<g; i++)
+float XII;
+S:printf("\nPlease Enter your Class XII Percent ");
+scanf("%g",&XII);
+if (XII >= 75)
+ {printf("Congratulations!You are eligible for admission in Mody University");
+  printf("\nLets proceed:- \n");
+ }
+else
+ {printf("Sorry, You don't pass the Eligibility Criteria..\n");
+  goto L;
+ }
+
+/*Taking Student Information*/
+printf("______________________________________________________________________\n\n");
+
+  fflush(stdin);
+  printf("\nEnter your Name: ");
+  scanf("%[^\n]",&name[i][j]);
+  fflush(stdin);
+  printf("\nEnter the Course [CSE/MECH/EE/BIOMED]: ");
+  scanf("%c",&crs[i]);
+  fflush(stdin);
+  printf("\nEnter your DOB {DD MM YYYY}: ");
+  scanf("%[^\n]",&dob[i]);
+  fflush(stdin);
+  printf("\nEnter your mobile number: ");
+  scanf("%s",&mno[i]);
+  fflush(stdin);
+  printf("\nEnter your Father's income (per annum): ");
+  scanf("%s",&inc[i]);
+  fflush(stdin);
+
+/*Fee Structure*/
+printf("\n______________________________________________________________________\n\n");
+printf("We would like to accept the Admission fees by any of these ways:-\n");
+printf("1. Cash\n");
+printf("2. Cheque\n");
+printf("3. RTGS/NEFT\n");
+float tfee=200000.00,dis=0,fee;
+if (XII >=95)
+dis=0.70;
+else if (XII >=90 && XII <=95)
+dis=0.60;
+else if (XII >=80 && XII <=90)
+dis=0.40;
+else if (inc[i]<=100000)
+dis=0.15;
+else
+dis=0;
+fee= tfee* (1-dis);
+printf("\nYour Admission fees is: %g", fee);
+printf("\nYou get %g percent off on your tuition fees ", (dis*100));
+printf("\n______________________________________________________________________\n\n");
+
+L:if (i<=g)
+goto S;
+
+/*Alloting Enrollment Numbers & Batches*/
+printf("\n______________________________________________________________________\n\n");
+for (i=0; i<2; i++)
+ {
+  for (j=0; j<20; j++)
+  {
+      printf("%s", name[i][j]);
+  }
+ }
+/*Sorting alphabetically*/
+char temp[20];
+for (i=0; i<100; i++)
+ {
+  for (j=0; j<20; j++)
+  {
+      if (strcmp(name[i],name[i+1]))
+      {
+          strcpy (temp, name[i]);
+          strcpy (name[i], name[i+1]);
+          strcpy (name[i+1], temp);
+      }
+  }
+ }
+ /*Tabular representation*/
+ for (i=0; i<1; i++)
+ {
+
+  printf("%[^\n]",name[i][j]);
+ }
+printf("\nThank You");
+getch();
+return 0;
+}

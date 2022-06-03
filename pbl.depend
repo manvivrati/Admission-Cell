@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1574750881 source:c:\users\manvi vrati\desktop\cse\codeblocks files\pbl\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+
+1577532960 source:d:\cse\c\codeblocks files\pbl\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+
